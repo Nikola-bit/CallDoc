@@ -1,0 +1,9 @@
+D:\BackEndDeveloping\BlaSoft-Practice\CallDoc\call-doc\CallDoc.DTO\bin\Debug\netcoreapp3.1\CallDoc.DTO.deps.json
+D:\BackEndDeveloping\BlaSoft-Practice\CallDoc\call-doc\CallDoc.DTO\bin\Debug\netcoreapp3.1\CallDoc.DTO.dll
+D:\BackEndDeveloping\BlaSoft-Practice\CallDoc\call-doc\CallDoc.DTO\bin\Debug\netcoreapp3.1\CallDoc.DTO.pdb
+D:\BackEndDeveloping\BlaSoft-Practice\CallDoc\call-doc\CallDoc.DTO\obj\Debug\netcoreapp3.1\CallDoc.DTO.csprojAssemblyReference.cache
+D:\BackEndDeveloping\BlaSoft-Practice\CallDoc\call-doc\CallDoc.DTO\obj\Debug\netcoreapp3.1\CallDoc.DTO.AssemblyInfoInputs.cache
+D:\BackEndDeveloping\BlaSoft-Practice\CallDoc\call-doc\CallDoc.DTO\obj\Debug\netcoreapp3.1\CallDoc.DTO.AssemblyInfo.cs
+D:\BackEndDeveloping\BlaSoft-Practice\CallDoc\call-doc\CallDoc.DTO\obj\Debug\netcoreapp3.1\CallDoc.DTO.csproj.CoreCompileInputs.cache
+D:\BackEndDeveloping\BlaSoft-Practice\CallDoc\call-doc\CallDoc.DTO\obj\Debug\netcoreapp3.1\CallDoc.DTO.dll
+D:\BackEndDeveloping\BlaSoft-Practice\CallDoc\call-doc\CallDoc.DTO\obj\Debug\netcoreapp3.1\CallDoc.DTO.pdb

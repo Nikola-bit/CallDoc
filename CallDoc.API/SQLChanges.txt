@@ -1,0 +1,43 @@
+---------------------------------------- Pance 21.10.2020 ------------------------------------
+
+INSERT INTO
+	PlatformConfiguration
+VALUES
+	(1, 'APPOINTMENT_STATUS', 'Scheduled', 'The appointment is scheduled.', GETDATE(),NULL),
+	(2, 'APPOINTMENT_STATUS', 'Cancelled', 'The appointment is cancelled', GETDATE(),NULL),
+	(3, 'APPOINTMENT_STATUS', 'Maintaining', 'The appointment is in duration.', GETDATE(),NULL),
+	(4, 'APPOINTMENT_STATUS', 'Finished', 'The appointment is finished.', GETDATE(),NULL),
+	(11, 'INSTITUTION_STATUS', 'Pending', 'The institution is waiting for confirmation.', GETDATE(),NULL),
+	(12, 'INSTITUTION_STATUS', 'Active', 'The institution is active', GETDATE(),NULL),
+	(13, 'INSTITUTION_STATUS', 'Inactive', 'The institution is not active.', GETDATE(),NULL),
+	(14, 'INSTITUTION_STATUS', 'Suspended', 'The institution is suspended.', GETDATE(),NULL),
+	(21, 'MEMBER_TYPE', 'Customer', 'The platform member role is customer.', GETDATE(),NULL),
+	(22, 'MEMBER_TYPE', 'Doctor', 'The platform member role is doctor.', GETDATE(),NULL),
+	(41, 'MEMBER_STATUS', 'Pending', 'The member is waiting for confirmation.', GETDATE(),NULL),
+	(42, 'MEMBER_STATUS', 'Active', 'The member is active.', GETDATE(),NULL),
+	(43, 'MEMBER_STATUS', 'Inactive', 'The member is not active.', GETDATE(),NULL),
+	(44, 'MEMBER_STATUS', 'Suspended', 'The member is suspended.', GETDATE(),NULL),
+	(51, 'INVITATION_STATUS', 'Pending', 'The invitation is waiting for response.', GETDATE(),NULL),
+	(52, 'INVITATION_STATUS', 'Accepted', 'The invitation is accepted.', GETDATE(),NULL),
+	(53, 'INVITATION_STATUS', 'Declined', 'The invitation is declined.', GETDATE(),NULL),
+	(54, 'INVITATION_STATUS', 'Expired', 'The invitation answering time has expired.', GETDATE(),NULL),
+	(61, 'CREDIT_CARD_TYPE', 'Visa', 'The credit card type is Visa.', GETDATE(),NULL),
+	(62, 'CREDIT_CARD_TYPE', 'Mastercard', 'The credit card type is Mastercard.', GETDATE(),NULL),
+	(63, 'CREDIT_CARD_TYPE', 'Amex', 'The credit card type is American Express.', GETDATE(),NULL),
+	(64, 'CREDIT_CARD_TYPE', 'Discover', 'The credit card type is Explorer.', GETDATE(),NULL),
+	(71, 'PAYMENT_STATUS', 'Waiting', 'The payment is waiting for its time to happen.', GETDATE(),NULL),
+	(72, 'PAYMENT_STATUS', 'Failed', 'The payment failed.', GETDATE(),NULL),
+	(73, 'PAYMENT_STATUS', 'Partly', 'The payment is partly completed.', GETDATE(),NULL),
+	(74, 'PAYMENT_STATUS', 'Fully', 'The payment is fully completed.', GETDATE(),NULL)
+
+-----------------------------------------------------------------------------------------------
+------------------------------------- Pance 22.10.2020 ----------------------------------------
+ALTER TABLE Institution
+ADD CONSTRAINT FK_Institution_Type FOREIGN KEY(TypeId)
+REFERENCES PlatformConfiguration([Value])
+
+INSERT INTO
+	PlatformConfiguration
+VALUES
+	(81, 'INSTITUTION_TYPE', 'Private', 'The istitution is private.', GETDATE(),NULL)
+-----------------------------------------------------------------------------------------------

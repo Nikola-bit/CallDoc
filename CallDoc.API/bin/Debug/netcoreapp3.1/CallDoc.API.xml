@@ -1,0 +1,1852 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CallDoc.API</name>
+    </assembly>
+    <members>
+        <member name="M:CallDoc.API.Controllers.DoctorController.CreateUpdateService(CallDoc.DTO.ServiceUpdateDTO)">
+            <summary>
+            Create/Update a doctor service.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST doctor/service/create/update
+                    {
+                        "serviceId": "FnV9//ikc71XLppgH6p0nw==" (If making update),
+                        "isActive" : true (If making update),
+                        "doctorId": "FnV9//ikc71XLppgH6p0nw==",
+                        "description": "I am free to talk to everyone who have a mental health problems.",
+                        "title": "Mental health talking",
+                        "price": "15"
+                    }
+            </remarks>
+            <returns>Service</returns>
+            <response code = "200">Returns the created/updated doctor service.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.DoctorController.SingleService(System.String)">
+            <summary>
+            Find single doctor service.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET doctor/service/single
+                    {
+                          "serviceId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Service</returns>
+            <response code = "200">Returns the searched doctor service.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.DoctorController.RemoveService(System.String)">
+            <summary>
+            Remove a doctor service.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST doctor/service/remove
+                    {
+                          "serviceId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Service</returns>
+            <response code = "200">Returns the removed doctor service.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.DoctorController.ListServices(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List doctor services.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST doctor/service/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Services</returns>
+            <response code = "200">Returns a list of doctor services.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.DoctorController.ByDoctorId(System.String)">
+            <summary>
+            List Service by doctorId.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET service/list/by/doctor
+                    {
+                          "doctorId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Service</returns>
+            <response code = "200">Returns a list of Services.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.CreateUpdateInstitution(CallDoc.DTO.InstitutionUpdateDTO)">
+            <summary>
+            Create/Update an institution.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/create/update
+                    {
+                        "name": "Paramedic Hospital",
+                        "logo": "https://i.imgur.com/FApqk3D.jpg",
+                        "typeId": "AWITwbEO4CpyPIjTCuwo7w==",
+                        "institutionId": "J+XGDuQUCVmqW6xWEd4pRw==",
+                        "statusId": "FnV9//ikc71XLppgH6p0nw=="
+                    }
+            </remarks>
+            <returns>Institution</returns>
+            <response code = "200">Returns the created/updated institution.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.SingleInstitution(System.String)">
+            <summary>
+            Find single institution.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET institution/single
+                    {
+                          "institutionId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Institution</returns>
+            <response code = "200">Returns the searched institution.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.RemoveInstitution(System.String)">
+            <summary>
+            Remove an institution.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/remove
+                    {
+                          "institutionId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Institution</returns>
+            <response code = "200">Returns the removed institution.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.ListInstitutiones(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List institutions.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Institutions</returns>
+            <response code = "200">Returns a list of institutions.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.InstitutionByType(System.String)">
+            <summary>
+            List institution by typeId.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET institution/list/by/ype
+                    {
+                          "typeId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Institution</returns>
+            <response code = "200">Returns a list of institutions.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.InstitutionByStatus(System.String)">
+            <summary>
+            List institution by statusId.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET institution/list/by/status
+                    {
+                          "statusId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Institution</returns>
+            <response code = "200">Returns a list of institutions.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.CreateUpdatePlatformSpecialty(CallDoc.DTO.PlatformSpecialtyUpdateDTO)">
+            <summary>
+            Create/Update a specialty.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/specialty/create/update
+                    {
+                          "specialtyId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "IsActive": true (If making update),
+                          "Name": "Cardiography"
+                    }
+            </remarks>
+            <returns>PlatformSpecialty</returns>
+            <response code = "200">Returns the created/updated specialty.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.SingleAddress(System.String)">
+            <summary>
+            Find single specialty.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET institution/platform/specialty/single
+                    {
+                          "specialtyId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>PlatformSpecialty</returns>
+            <response code = "200">Returns the searched specialty.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.RemovePlatformSpecialty(System.String)">
+            <summary>
+            Remove a specialty.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/specialty/remove
+                    {
+                          "specialtyId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>PlatformSpecialty</returns>
+            <response code = "200">Returns the removed specialty.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.ListPlatformSpecialty(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List specialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/specialty/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>PlatformSpecialty</returns>
+            <response code = "200">Returns a list of specialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.CreateUpdatePlatformSubSpecialty(CallDoc.DTO.PlatformSubSpecialtyUpdateDTO)">
+            <summary>
+            Create/Update a subspecialty/.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/subspecialty/create/update
+                    {
+                          "subSpecialtyId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "isActive": true (If making update),
+                          "name": "Cardiography",
+                          "specialtyId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>PlatformSubSpecialty</returns>
+            <response code = "200">Returns the created/updated subspecialty/.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.SinglePlatformSubSpecialty(System.String)">
+            <summary>
+            Find single subspecialty/.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET institution/platform/subspecialty/single
+                    {
+                          "subSpecialtyId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>PlatformSubSpecialty</returns>
+            <response code = "200">Returns the searched subspecialty/.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.RemovePlatformSubSpecialty(System.String)">
+            <summary>
+            Remove a subspecialty/.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/subspecialty/remove
+                    {
+                          "subSpecialtyId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>PlatformSubSpecialty</returns>
+            <response code = "200">Returns the removed subspecialty/.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.ListSubSpecialties(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List subspecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/subspecialty/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>PlatformSubSpecialty</returns>
+            <response code = "200">Returns a list of subspecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.ListSubSpecialtiesUnderSpecialty(CallDoc.DTO.UnderSpecialtyPaginationFilter)">
+            <summary>
+            List subSpecialty by specialtyId.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST platform/subspecialty/list/specialty
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES),
+                          "specialtyId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>SubSpecialty</returns>
+            <response code = "200">Returns a list of subSpecialties under one Specialty.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.CreateUpdatePlatformService(CallDoc.DTO.PlatformServiceUpdateDTO)">
+            <summary>
+            Create/Update a service.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/service/create/update
+                    {
+                          "PlatformServiceId": "I14kpXunkSuJIU+8++5v3Q==" (if making update),
+                          "subSpecialtyId": "I14kpXunkSuJIU+8++5v3Q==" ,
+                          "SpecialtyId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "isActive": true (If making update),
+                          "name": "Cardiography"
+                    }
+            </remarks>
+            <returns>PlatformService</returns>
+            <response code = "200">Returns the created/updated service/.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.SinglePlatformService(System.String)">
+            <summary>
+            Find single service/.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET institution/platform/service/single
+                    {
+                          "PlatformServiceId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>PlatformService</returns>
+            <response code = "200">Returns the searched service/.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.RemovePlatformService(System.String)">
+            <summary>
+            Remove a service/.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/service/remove
+                    {
+                          "PlatformServiceId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>PlatformService</returns>
+            <response code = "200">Returns the removed service/.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.ListServices(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List services.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/service/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>PlatformService</returns>
+            <response code = "200">Returns a list of services.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.ListServicesUnderSpecialtySubSpecialty(CallDoc.DTO.UnderSpecialtySubSpecialtyPaginationFilter)">
+            <summary>
+            List service by subSpecialtyId or/and specialty.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/platform/service/list/specialty/subspecialty
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES),
+                          "specialtyId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "subSpecialtyId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Service</returns>
+            <response code = "200">Returns a list of services under that Specialty and/or subspecialty.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.CreateUpdateBranch(CallDoc.DTO.DTO.InstitutionBranchDTO)">
+            <summary>
+            Create/Update institution branch.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/branch/create/update
+                    {
+                          "name": "Sistina Veles",
+                          "addressId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "biography": "It is a private hospital with the most professional doctors in the city.",
+                          "PhoneNumber": "043/224-426",
+                          "contactEmail" : "sistina@mail.com",
+                          "website": "sistina.com/veles",
+                          "logo": "www.imgur.com/rgDsafS.png",
+                          "institutionBranchId": "I14kpXunkSuJIU+8++5v3Q==" (If making update)
+                    }
+            </remarks>
+            <returns>InstitutionBranch</returns>
+            <response code = "200">Returns the created/updated institutionBranch.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.SingleBranch(System.String)">
+            <summary>
+            Find single institutionBranch.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET institution/branch/single
+                    {
+                          "institutionBranchId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>InstitutionBranch</returns>
+            <response code = "200">Returns the searched branch.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.RemoveBranch(System.String)">
+            <summary>
+            Remove a institutionBranch.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/branch/remove
+                    {
+                          "institutionBranchId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Institutionbranch</returns>
+            <response code = "200">Returns the removed branch.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.InstitutionController.ListBranch(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List institutionBranch.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST institution/branch/list
+                    {
+                          "pageNumber": 20,
+                          "pageSize": 1,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>InstitutionBranch</returns>
+            <response code = "200">Returns a list of InstitutionBranch.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.AppointmentStatus">
+             <summary>
+             Get all appointment statuses.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET lookup/appointment/status
+                 
+             </remarks>
+             <returns>Appoinment Statuses</returns>
+             <response code = "200">Returns all appointment statuses.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.InstitutionStatus">
+             <summary>
+             Get all institution statuses.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET lookup/institution/status
+                 
+             </remarks>
+             <returns>Institution Statuses</returns>
+             <response code = "200">Returns all institution statuses.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.MemberType">
+             <summary>
+             Get all member types.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET lookup/member/type
+                 
+             </remarks>
+             <returns>Member Type</returns>
+             <response code = "200">Returns all member types.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.MemberStatus">
+             <summary>
+             Get all member statuses.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET lookup/member/status
+                 
+             </remarks>
+             <returns>Member Statuses</returns>
+             <response code = "200">Returns all member statuses.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.InvitationStatus">
+             <summary>
+             Get all invitation statuses.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET lookup/invitation/status
+                 
+             </remarks>
+             <returns>Invitation Statuses</returns>
+             <response code = "200">Returns all invitation statuses.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.CreditCardType">
+             <summary>
+             Get all credit card types.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET lookup/credit/card/type
+                 
+             </remarks>
+             <returns>Credit card types</returns>
+             <response code = "200">Returns all credit card types.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.PaymentStatus">
+             <summary>
+             Get all payment statuses.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET lookup/payment/status
+                 
+             </remarks>
+             <returns>Payment Statuses</returns>
+             <response code = "200">Returns all payment statuses.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.InstitutionType">
+             <summary>
+             Get all institution types.
+             </summary>
+             <remarks>
+             Sample request:
+            
+                 GET lookup/institution/type
+                 
+             </remarks>
+             <returns>Institution types</returns>
+             <response code = "200">Returns all institution types.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.CreateUpdateDoctor(CallDoc.DTO.DoctorSpecialtiesDTO)">
+            <summary>
+            Create/Update a DoctorSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/doctor/subspecialties/create/update
+                    {
+                          "DoctorSubSpecialties": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "SubSpecialtyId": "I14kpXunkSuJIU+8++5v3Q=="
+                          "isActive": true (If making update),
+                          "DoctorId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>DoctorSpecialty</returns>
+            <response code = "200">Returns the created/updated Doctorspecialty.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.SingleDoctorSpecialty(System.String)">
+            <summary>
+            Find single DoctorSpecialty.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET lookup/doctor/subspecialties/single
+                    {
+                          "DoctorSubSpecialties": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>DoctorSubSpecialty</returns>
+            <response code = "200">Returns the searched Doctorsubspecialty.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.RemoveDoctorSpecialty(System.String)">
+            <summary>
+            Remove a DoctorSpecialty.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/doctor/subspecialties/remove
+                    {
+                          "DoctorSubSpecialties1": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>DoctorSpecialty</returns>
+            <response code = "200">Returns the removed Doctorspecialty.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.ListDoctorSpecialties(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List DoctorSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/doctor/subspecialties/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>DoctorSpecialty</returns>
+            <response code = "200">Returns a list of DoctorSpecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.CreateUpdateSpecialties(CallDoc.DTO.InstitutionSpecialtiesDTO)">
+            <summary>
+            Create/Update a InstitutionSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/specialties/create/update
+                    {
+                          "institutionSpecialtiesId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "institutionBranchId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "specialtyId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "isActive" : "true"
+                    }
+            </remarks>
+            <returns>InstitutionSpecialties</returns>
+            <response code = "200">Returns the created/updated institutionSpecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.SingleSpecialties(System.String)">
+            <summary>
+            Find single institutionSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET lookup/institution/specialties/single
+                    {
+                          "institutionSpecialtiesId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>InstitutionSpecialties</returns>
+            <response code = "200">Returns the searched specialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.RemoveSpecialties(System.String)">
+            <summary>
+            Remove a institutionSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/specialties/remove
+                    {
+                          "institutionSpecialtiesId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>InstitutionSpecialties</returns>
+            <response code = "200">Returns the removed specialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.ListSpecialties(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List institutionSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/specialties/list
+                    {
+                          "pageNumber": 20,
+                          "pageSize": 1,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>InstitutionSpecialties</returns>
+            <response code = "200">Returns a list of InstitutionSpecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.CreateMultipleSpecialties(CallDoc.DTO.InstitutionSpecialtiesBodyDTO)">
+            <summary>
+            Add multiple institution Specialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/specialties/create/multiple
+                    {
+                        "institutionBranchId" : "I14kpXunkSuJIU+8++5v3Q==",
+                        "specialtiesIds": [ {"I14kpXunkSuJIU+8++5v3Q==", "I14kpXunkSuJIU+8++5v3Q=="} ]
+                    }
+            </remarks>
+            <returns>Institution Specialties</returns>
+            <response code = "200">Returns a list of the added InstitutionSpecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.RemoveMultipleSpecialties(CallDoc.DTO.InstitutionSpecialtiesBodyDTO)">
+            <summary>
+            Remove multiple institution Specialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/specialties/remove/multiple
+                    {
+                        "institutionBranchId" : "I14kpXunkSuJIU+8++5v3Q==",
+                        "specialtiesIds": [ {"I14kpXunkSuJIU+8++5v3Q==", "I14kpXunkSuJIU+8++5v3Q=="} ]
+                    }
+            </remarks>
+            <returns>Institution Specialties</returns>
+            <response code = "200">Returns a list of the removed InstitutionSpecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.CreateUpdateSubSpecialties(CallDoc.DTO.InstitutionSubSpecialtiesDTO)">
+            <summary>
+            Create/Update a Institution SubSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/subspecialties/create/update
+                    {
+                          "institutionSubSpecialtiesId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "institutionBranchId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "subSubSpecialtyId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "isActive" : "true"
+                    }
+            </remarks>
+            <returns>InstitutionSubSpecialties</returns>
+            <response code = "200">Returns the created/updated institutionSubSpecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.SingleSubSpecialties(System.String)">
+            <summary>
+            Find single institutionSubSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET lookup/institution/subspecialties/single
+                    {
+                          "institutionSubSpecialtiesId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>InstitutionSubSpecialties</returns>
+            <response code = "200">Returns the searched subspecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.RemoveSubSpecialties(System.String)">
+            <summary>
+            Remove a institutionSubSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/subspecialties/remove
+                    {
+                          "institutionSubSpecialtiesId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>InstitutionSubSpecialties</returns>
+            <response code = "200">Returns the removed subspecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.ListSubSpecialties(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List institutionSubSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/subspecialties/list
+                    {
+                          "pageNumber": 20,
+                          "pageSize": 1,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>InstitutionSubSpecialties</returns>
+            <response code = "200">Returns a list of InstitutionSubSpecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.CreateMultipleSubSpecialties(CallDoc.DTO.InstitutionSubSpecialtiesBodyDTO)">
+            <summary>
+            Add multiple institution SubSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/subspecialties/create/multiple
+                    {
+                        "institutionBranchId" : "I14kpXunkSuJIU+8++5v3Q==",
+                        "subspecialtiesIds": [ {"I14kpXunkSuJIU+8++5v3Q==", "I14kpXunkSuJIU+8++5v3Q=="} ]
+                    }
+            </remarks>
+            <returns>Institution SubSpecialties</returns>
+            <response code = "200">Returns a list of the added InstitutionSubSpecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.RemoveMultipleSubSpecialties(CallDoc.DTO.InstitutionSubSpecialtiesBodyDTO)">
+            <summary>
+            Remove multiple institution SubSpecialties.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/subspecialties/remove/multiple
+                    {
+                        "institutionBranchId" : "I14kpXunkSuJIU+8++5v3Q==",
+                        "subspecialtiesIds": [ {"I14kpXunkSuJIU+8++5v3Q==", "I14kpXunkSuJIU+8++5v3Q=="} ]
+                    }
+            </remarks>
+            <returns>Institution SubSpecialties</returns>
+            <response code = "200">Returns a list of the removed InstitutionSubSpecialties.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.CreateUpdateServices(CallDoc.DTO.InstitutionServicesDTO)">
+            <summary>
+            Create/Update a InstitutionServices.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/services/create/update
+                    {
+                          "institutionServicesId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "institutionBranchId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "serviceId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "isActive" : "true"
+                    }
+            </remarks>
+            <returns>InstitutionServices</returns>
+            <response code = "200">Returns the created/updated institutionServices.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.SingleServices(System.String)">
+            <summary>
+            Find single institutionServices.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET lookup/institution/services/single
+                    {
+                          "institutionServicesId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>InstitutionServices</returns>
+            <response code = "200">Returns the searched services.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.RemoveServices(System.String)">
+            <summary>
+            Remove a institutionServices.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/services/remove
+                    {
+                          "institutionServicesId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>InstitutionServices</returns>
+            <response code = "200">Returns the removed services.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.ListServices(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List institutionServices.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/services/list
+                    {
+                          "pageNumber": 20,
+                          "pageSize": 1,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>InstitutionServices</returns>
+            <response code = "200">Returns a list of InstitutionServices.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.CreateMultipleServices(CallDoc.DTO.InstitutionServicesBodyDTO)">
+            <summary>
+            Add multiple institution Services.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/services/create/multiple
+                    {
+                        "institutionBranchId" : "I14kpXunkSuJIU+8++5v3Q==",
+                        "services": [ {
+                            "institutionDoctorId" : "I14kpXunkSuJIU+8++5v3Q==",
+                            "platformServiceId" : "I14kpXunkSuJIU+8++5v3Q=="
+                        },
+                        {
+                            "institutionDoctorId" : "I14kpXunkSuJIU+8++5v3Q==",
+                            "platformServiceId" : "I14kpXunkSuJIU+8++5v3Q=="
+                        } ]
+                    }
+            </remarks>
+            <returns>Institution Services</returns>
+            <response code = "200">Returns a list of the added InstitutionServices.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.LookupController.RemoveMultipleServices(CallDoc.DTO.InstitutionServicesBodyDTO)">
+            <summary>
+            Remove multiple institution Services.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST lookup/institution/services/remove/multiple
+                    {
+                        "institutionBranchId" : "I14kpXunkSuJIU+8++5v3Q==",
+                        "services": [ {
+                            "institutionDoctorId" : "I14kpXunkSuJIU+8++5v3Q==",
+                            "platformServiceId" : "I14kpXunkSuJIU+8++5v3Q=="
+                        },
+                        {
+                            "institutionDoctorId" : "I14kpXunkSuJIU+8++5v3Q==",
+                            "platformServiceId" : "I14kpXunkSuJIU+8++5v3Q=="
+                        } ]
+                    }
+            </remarks>
+            <returns>Institution Services</returns>
+            <response code = "200">Returns a list of the removed InstitutionServices.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.LoginMember(CallDoc.DTO.DTO.MemberLoginDTO)">
+            <summary>
+            Login a member.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/login
+                    {
+                         "email": "john.p@yahoo.com",
+                         "password": "********"
+                    }
+            </remarks>
+            <returns>Member</returns>
+            <response code = "200">Returns the logged member with token.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.CreateUpdateMember(CallDoc.DTO.DTO.MemberUpdateDTO)">
+            <summary>
+            Create/Update a member.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/create/update
+                    {
+                         "email": "john.p@yahoo.com",
+                         "password": "********",
+                         "memberTypeId": "IXw7wb/9hehgfBb8RuqUOw==",
+                         "memberId": "IXw7wb/9hehgfBb8RuqUOw==", (If making update)
+                         "memberStatusId": "IXw7wb/9hehgfBb8RuqUOw==" (If making update)
+                    }
+            </remarks>
+            <returns>Member</returns>
+            <response code = "200">Returns the created/updated member.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.SingleMember(System.String)">
+            <summary>
+            Find single member.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET member/single
+                    {
+                          "memberId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Member</returns>
+            <response code = "200">Returns the searched member.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.RemoveMember(System.String)">
+            <summary>
+            Remove a member.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/remove
+                    {
+                          "memberId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Member</returns>
+            <response code = "200">Returns the removed member.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.ListMemberes(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List members.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Members</returns>
+            <response code = "200">Returns a list of members.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.MembersByStatus(System.String)">
+            <summary>
+            List members by status.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET member/list/by/status
+                    {
+                          "statusId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Members</returns>
+            <response code = "200">Returns a list of members.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.MembersByType(System.String)">
+            <summary>
+            List members by type.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET member/list/by/type
+                    {
+                          "typeId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Members</returns>
+            <response code = "200">Returns a list of members.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.CreateUpdateMemberDetails(CallDoc.DTO.DTO.MemberDetailsCreateDTO)">
+            <summary>
+            Create/Update a member details.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/details/create/update
+                    {
+                        "memberId": "J+XGDuQUCVmqW6xWEd4pRw==",
+                        "firstName": "John",
+                        "lastName": "Smith",
+                        "profilePicture": "www.imgur.com/frfSFdv.jpg",
+                        "about": "Empty",
+                        "embg": 1903002480012
+                        "dateOfBirth": "2002-03-19",
+                        "addressId": "string",
+                        "phoneNumber": "+38972562174",
+                        "gender": "Male",
+                    }
+            </remarks>
+            <returns>Member Details</returns>
+            <response code = "200">Returns the created/updated member details.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.SingleMemberDetails(System.String)">
+            <summary>
+            Find single member details.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET member/details/single
+                    {
+                          "memberId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Member Details</returns>
+            <response code = "200">Returns the searched member details.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.RemoveMemberDetails(System.String)">
+            <summary>
+            Remove a member details.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/details/remove
+                    {
+                          "memberId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Member Details</returns>
+            <response code = "200">Returns the removed member details.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.ListMemberDetailses(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List member details.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/details/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Members Details</returns>
+            <response code = "200">Returns a list of member details.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.CreateUpdateMemberInvitation(CallDoc.DTO.DTO.MemberInvitationUpdateDTO)">
+            <summary>
+            Create/Update a member invitation.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/invitation/create/update
+                    {
+                       "memberId": "J+XGDuQUCVmqW6xWEd4pRw==",
+                       "firstName": "John",
+                       "lastName": "Smith",
+                       "phone": "+38972450234",
+                       "invitationCode": "AS22KJ", (If making new invitation)
+                       "memberInvitationId": "J+XGDuQUCVmqW6xWEd4pRw==", (If making update)
+                       "statusId": "XdXyDuQpIwWrZ8Slxd/JeA==" (If making update)
+                   }
+            </remarks>
+            <returns>Member Invitation</returns>
+            <response code = "200">Returns the created/updated member invitation.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.SingleMemberInvitation(System.String)">
+            <summary>
+            Find single member invitation.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET member/invitation/single
+                    {
+                          "memberInvitationId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Member Invitation</returns>
+            <response code = "200">Returns the searched member invitation.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.RemoveMemberInvitation(System.String)">
+            <summary>
+            Remove a member invitation.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/invitation/remove
+                    {
+                          "memberInvitationId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Member Invitation</returns>
+            <response code = "200">Returns the removed member invitation.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.ListMemberInvitations(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List member invitations.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST member/invitation/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Member Invitations</returns>
+            <response code = "200">Returns a list of member invitations.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.MemberInvitationsByStatus(System.String)">
+            <summary>
+            List member invitations by status.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET member/invitation/list/by/status
+                    {
+                          "statusId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Member Invitations</returns>
+            <response code = "200">Returns a list of member invitations.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.MemberController.MemberInvitationsByMember(System.String)">
+            <summary>
+            List member invitations by member.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET member/invitation/list/by/member
+                    {
+                          "memberId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Member Invitations</returns>
+            <response code = "200">Returns a list of member invitations.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.CreateUpdateAddress(CallDoc.DTO.AddressUpdateDTO)">
+            <summary>
+            Create/Update an address.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/address/create/update
+                    {
+                          "addressId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "IsActive": true (If making update),
+                          "streetName": "ul. Blagoj Gjorev 22/1",
+                          "city": "Veles",
+                          "country": "Macedonia",
+                          "postCode": "1400",
+                          "isPrimary": true
+                    }
+            </remarks>
+            <returns>Address</returns>
+            <response code = "200">Returns the created/updated address.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.SingleAddress(System.String)">
+            <summary>
+            Find single address.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/address/single
+                    {
+                          "addressId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Address</returns>
+            <response code = "200">Returns the searched address.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.RemoveAddress(System.String)">
+            <summary>
+            Remove an address.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/address/remove
+                    {
+                          "addressId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Address</returns>
+            <response code = "200">Returns the removed address.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.ListAddresses(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List addresses.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/address/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Addresses</returns>
+            <response code = "200">Returns a list of addresses.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.CreateCreditCard(CallDoc.DTO.CreditCardCreateDTO)">
+            <summary>
+            Create/Update a credit card.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/credit/card/create
+                    {
+                        "number": "5000-3343-2243-3454",
+                        "typeId": "XPal4vWxjKDhgp1I5DIRKg==",
+                        "expiryDate": "2020-10-21T10:39:57.145Z",
+                        "memberId": "J+XGDuQUCVmqW6xWEd4pRw=="
+                    }
+            </remarks>
+            <returns>Credit Card</returns>
+            <response code = "200">Returns the created/updated credit card.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.SingleCreditCard(System.String)">
+            <summary>
+            Find single credit card.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/credit/card/single
+                    {
+                          "creditCardId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Credit Card</returns>
+            <response code = "200">Returns the searched credit card.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.RemoveCreditCard(System.String)">
+            <summary>
+            Remove a credit card.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/credit/card/remove
+                    {
+                          "creditCardId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Credit Card</returns>
+            <response code = "200">Returns the removed credit card.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.ListCreditCards(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List credit cards.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/credit/card/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Credit Cards</returns>
+            <response code = "200">Returns a list of credit cards.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.CreditCardsByOwner">
+             <summary>
+             List credit cards owned by custom member.
+             </summary>
+             <remarks>
+             Sample request:
+             
+                 GET services/credit/card/list/member
+            
+             </remarks>
+             <returns>Credit Cards</returns>
+             <response code = "200">Returns a list of credit cards.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.CreditCardsByType(System.String)">
+            <summary>
+            List credit cards owned by custom type.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/credit/card/list/by/type
+                    {
+                          "typeId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Credit Cards</returns>
+            <response code = "200">Returns a list of credit cards.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.CreateUpdatePayment(CallDoc.DTO.PaymentUpdateDTO)">
+            <summary>
+            Create/Update a payment.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/payment/create/update
+                    {
+                        "paymentId": "AWITwbEO4CpyPIjTCuwo7w==" (If making update),
+                        "paymentStatusId": "FnV9//ikc71XLppgH6p0nw==" (If making update),
+                        "creditCardId": "FnV9//ikc71XLppgH6p0nw==",
+                        "totalAmount": "230"
+                    }
+            </remarks>
+            <returns>Payment</returns>
+            <response code = "200">Returns the created/updated payment.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.SinglePayment(System.String)">
+            <summary>
+            Find single payment.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/payment/single
+                    {
+                          "paymentId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Payment</returns>
+            <response code = "200">Returns the searched payment.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.RemovePayment(System.String)">
+            <summary>
+            Remove a payment.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/payment/remove
+                    {
+                          "paymentId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Payment</returns>
+            <response code = "200">Returns the removed payment.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.ListPayments(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List payments.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/payment/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Payments</returns>
+            <response code = "200">Returns a list of payments.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.PaymentsByCreditCard(System.String)">
+            <summary>
+            List payments done by custom credit card.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/payment/list/by/credit/card
+                    {
+                          "creditCardId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Payments</returns>
+            <response code = "200">Returns a list of payments.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.PaymentsByOwner(System.String)">
+            <summary>
+            List payments done by custom member.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/payment/list/by/owner
+                    {
+                          "ownerId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Payments</returns>
+            <response code = "200">Returns a list of payments.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.PaymentsByStatus(System.String)">
+            <summary>
+            List payments done by custom status.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/payment/list/by/status
+                    {
+                          "statusId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Payments</returns>
+            <response code = "200">Returns a list of payments.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.CreateUpdateAppointment(CallDoc.DTO.AppointmentUpdateDTO)">
+            <summary>
+            Create/Update an appointment.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/appointment/create/update
+                    {
+                        "patientId": "J+XGDuQUCVmqW6xWEd4pRw==",
+                        "doctorId": "J+XGDuQUCVmqW6xWEd4pRw==",
+                        "appointmentDate": "J+XGDuQUCVmqW6xWEd4pRw==",
+                        "duration": 3,
+                        "transactionCode": "3435-3452-3531-2345",
+                        "paymentId": "J+XGDuQUCVmqW6xWEd4pRw==",
+                        "serviceId": "J+XGDuQUCVmqW6xWEd4pRw==",
+                        "appointmentId": "J+XGDuQUCVmqW6xWEd4pRw==" (If making update),
+                        "statusId": "J+XGDuQUCVmqW6xWEd4pRw==" (If making update),
+                        "isCancelled": true (If cancelling),
+                        "cancellationReasonNote": "I must go on blood pressure test." (If cancelling),
+                        "cancellationById": "J+XGDuQUCVmqW6xWEd4pRw==" (If cancelling),
+                    }
+            </remarks>
+            <returns>Appointment</returns>
+            <response code = "200">Returns the created/updated appointment.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.SingleAppointment(System.String)">
+            <summary>
+            Find single appointment.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/appointment/single
+                    {
+                          "appointmentId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Appointment</returns>
+            <response code = "200">Returns the searched appointment.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.AppointmentByPayment(System.String)">
+            <summary>
+            Find appointment by payment.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/appointment/single/byPayment
+                    {
+                          "paymentId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Appointment</returns>
+            <response code = "200">Returns the appointment by searched payment.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.RemoveAppointment(System.String)">
+            <summary>
+            Remove an appointment.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/appointment/remove
+                    {
+                          "appointmentId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Appointment</returns>
+            <response code = "200">Returns the removed appointment.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.ListAppointmentes(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List appointments.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/appointment/list
+                    {
+                          "pageNumber": 1,
+                          "pageSize": 20,
+                          "sortColumn": "AppointemtsDate" (PatientId, DoctorId, AppointemtsDate, ServiceId, DateCreated),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Appointments</returns>
+            <response code = "200">Returns a list of appointments.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.AppointmentsByPatient(System.String)">
+            <summary>
+            List appointments by patient.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/appointment/list/by/patient
+                    {
+                          "patientId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Appointments</returns>
+            <response code = "200">Returns a list of appointments.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.AppointmentsByDoctor(System.String)">
+            <summary>
+            List appointments by doctor.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/appointment/list/by/doctor
+                    {
+                          "doctorId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Appointments</returns>
+            <response code = "200">Returns a list of appointments.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.AppointmentsByService(System.String)">
+            <summary>
+            List appointments by service.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/appointment/list/by/service
+                    {
+                          "serviceId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Appointments</returns>
+            <response code = "200">Returns a list of appointments.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.CreateUpdateHistory(CallDoc.DTO.DTO.PatientHistoryDTO)">
+            <summary>
+            Create/Update a patient history.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/patient/history/create/update
+                    {
+                          "patientHistoryId": "I14kpXunkSuJIU+8++5v3Q==" (If making update),
+                          "appointmentId": "I14kpXunkSuJIU+8++5v3Q==",
+                          "diagnose": "something",
+                          "findingNote" : "some",
+                          "treatmentNote" : "treatment",
+                          "doctorInternNote" : "note"
+                    }
+            </remarks>
+            <returns>Patient History</returns>
+            <response code = "200">Returns the created/updated patient history.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.SinglePHistory(System.String)">
+            <summary>
+            Find single patient history.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                GET services/patient/history/single
+                    {
+                          "patienthistoryId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Patient History</returns>
+            <response code = "200">Returns the searched history.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.RemovePHistory(System.String)">
+            <summary>
+            Remove a patient history.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/patient/history/remove
+                    {
+                          "patientHistoryId": "I14kpXunkSuJIU+8++5v3Q=="
+                    }
+            </remarks>
+            <returns>Patient History</returns>
+            <response code = "200">Returns the removed patient history.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.ListPHistory(CallDoc.DTO.PaginationFilter)">
+            <summary>
+            List patients history.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST services/patient/history/list
+                    {
+                          "pageNumber": 20,
+                          "pageSize": 1,
+                          "sortColumn": "string" (Not available yet),
+                          "sortDirection": "ASC" (ASC or DES)
+                    }
+            </remarks>
+            <returns>Patients History</returns>
+            <response code = "200">Returns a list of patients history.</response>
+            <response code = "400">An error occured.</response>
+        </member>
+        <member name="M:CallDoc.API.Controllers.ServicesController.HistoryByPatient">
+             <summary>
+             List patient history for custom patient.
+             </summary>
+             <remarks>
+             Sample request:
+             
+                 GET services/patient/history/list/patient
+            
+             </remarks>
+             <returns>Patient History</returns>
+             <response code = "200">Returns a list of searched patient history.</response>
+             <response code = "400">An error occured.</response>
+        </member>
+    </members>
+</doc>
